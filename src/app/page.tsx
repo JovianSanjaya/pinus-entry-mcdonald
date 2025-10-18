@@ -125,7 +125,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-6xl font-black text-[#292929] dark:text-white mb-6 leading-tight">
-                Hi, I'm <span className="text-[#DA291C]">Jovian</span>
+                Hi, I&apos;m <span className="text-[#DA291C]">Jovian</span>
               </h1>
               <div className="h-20 mb-6">
                 <p className="text-2xl md:text-3xl font-bold text-[#DA291C]">
@@ -481,7 +481,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-black text-[#292929] dark:text-white mb-6"
           >
-            Let's Work Together
+            Let&apos;s Work Together
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -490,7 +490,7 @@ export default function Home() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-xl text-[#6C757D] dark:text-gray-400 mb-8"
           >
-            Interested in collaborating on innovative projects? Let's connect!
+            Interested in collaborating on innovative projects? Let&apos;s connect!
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

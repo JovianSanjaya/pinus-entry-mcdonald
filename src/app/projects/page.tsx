@@ -125,21 +125,6 @@ export default function ProjectsPage() {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mt-16 text-center"
-        >
-          <Link
-            href="/"
-            className="inline-block bg-[#FFC72C] hover:bg-[#F4B41A] text-[#292929] font-bold py-4 px-12 rounded-md transition-all duration-300 text-lg shadow-lg"
-          >
-            ← Back to Home
-          </Link>
-        </motion.div>
       </div>
     </div>
   );

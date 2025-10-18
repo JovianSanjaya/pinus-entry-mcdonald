@@ -1,6 +1,5 @@
 'use client';
 
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function AchievementsPage() {
@@ -131,21 +130,6 @@ export default function AchievementsPage() {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mt-16 text-center"
-        >
-          <Link
-            href="/"
-            className="inline-block bg-[#DA291C] hover:bg-[#c02315] text-white font-bold py-4 px-12 rounded-md transition-all duration-300 text-lg shadow-lg"
-          >
-            ← Back to Home
-          </Link>
-        </motion.div>
       </div>
     </div>
   );
