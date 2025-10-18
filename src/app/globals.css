@@ -1,26 +1,75 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
+  --nus-orange: #EF7C00;
+  --nus-blue: #003D7C;
+  --nus-dark-blue: #002855;
+  --nus-light-blue: #0066CC;
+  --nus-gray: #6C757D;
+  --nus-light-gray: #F8F9FA;
   --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --foreground: #333333;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a1929;
+    --foreground: #f5f5f5;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-open-sans), 'Open Sans', 'Arial', sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar - NUS colors */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1a2332;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--nus-orange);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d66d00;
+}
+
+/* NUS style button animations */
+@layer components {
+  .btn-nus-primary {
+    @apply bg-[#EF7C00] hover:bg-[#d66d00] text-white font-bold py-4 px-8 rounded-md transition-all duration-300 transform hover:scale-105 shadow-lg;
+  }
+  
+  .btn-nus-secondary {
+    @apply bg-[#003D7C] hover:bg-[#002855] text-white font-bold py-4 px-8 rounded-md transition-all duration-300 transform hover:scale-105 shadow-lg;
+  }
+
+  .card-nus {
+    @apply bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+  }
 }
